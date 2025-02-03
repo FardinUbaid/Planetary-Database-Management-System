@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #323437;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  background-color: #444;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 5px;
+  z-index: 999;
+  padding: 10px 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.6s ease-in-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+nav a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+nav a:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 75, 43, 0.3);
+  color: white;
+}
+
+nav a:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 10px rgba(255, 75, 43, 0.2);
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.slideshow-container img.active {
+  display: block;
+}
+
+.slideshow-container .prev,
+.slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  background-color: #333;
+  height: 70px;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+}
