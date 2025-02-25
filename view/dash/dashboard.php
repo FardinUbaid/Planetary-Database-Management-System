@@ -25,7 +25,7 @@ if (!isset($_SESSION['auth_id'])) {
         <a href="../system/planet/environment/allenvironments.php">Environment</a>
         <a href="../system/planet/moon/allmoons.php">Moons</a>
         <a href="../mission/allmissions.php">Missions</a>
-        <a href="http://localhost/pldbms/view/about.php">About</a>
+        <a href="http://localhost/Planetary-Database-Management-System/view/about.php">About</a>
         <a href="../../controller/auth/logoutController.php">Logout</a>
         
     </nav>

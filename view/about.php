@@ -19,7 +19,7 @@ if (!isset($_SESSION['auth_id'])) {
 <header>Planetary Database Management System</header>
 
 <nav>
-    <a href="http://localhost/pldbms/view/dash/dashboard.php">Dashboard</a>
+    <a href="http://localhost/Planetary-Database-Management-System/view/dash/dashboard.php">Dashboard</a>
 </nav>
 
 

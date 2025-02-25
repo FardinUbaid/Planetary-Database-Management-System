@@ -27,7 +27,7 @@ unset($_SESSION['planets'], $_SESSION['error']);
         PLANETS
     </header>
     <nav>
-        <a href="http://localhost/pldbms/view/about.php">About</a>
+        <a href="http://localhost/Planetary-Database-Management-System/view/about.php">About</a>
         <a href="../../../controller/auth/logoutController.php">Logout</a>
     </nav>
     <a href="../allsystems.php" style="display: block; width: 100%; text-align: center; text-decoration: none;">

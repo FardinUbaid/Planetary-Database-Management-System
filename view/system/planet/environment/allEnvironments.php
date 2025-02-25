@@ -29,7 +29,7 @@ require_once ('../../../../controller/system/planet/environment/allEnvironmentsC
         <a href="../allplanets.php">Planets</a>
         <a href="../moon/allmoons.php">Moons</a>
         <a href="../../../mission/allmissions.php">Missions</a>
-        <a href="http://localhost/pldbms/view/about.php">About</a>
+        <a href="http://localhost/Planetary-Database-Management-System/view/about.php">About</a>
         <a href="../../../../controller/auth/logoutController.php">Logout</a>
         
     </nav>
