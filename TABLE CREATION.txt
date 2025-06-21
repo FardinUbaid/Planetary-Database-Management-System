@@ -1,0 +1,83 @@
+
+**Please Insert These given SQL into your Oracle 10g express Edition to properly run the project**
+
+Table creation:
+
+
+Planetry System table:
+
+CREATE TABLE PlanetrySystem (
+    system_id NUMBER CONSTRAINT pk_system_id PRIMARY KEY,
+    star_type VARCHAR2(50),
+    is_part_of_solar_system CHAR(1),
+    star_system_type VARCHAR2(50)
+);
+
+CREATE TABLE PlanetrySystemLink (
+    link_id NUMBER CONSTRAINT Syslink_id PRIMARY KEY,
+    is_in_habitable_zone CHAR(1),
+    distance_to_star_au NUMBER,
+    system_id NUMBER,
+    CONSTRAINT fk_SystemLink_sys_id FOREIGN KEY (system_id) REFERENCES PlanetrySystem(system_id)
+);
+
+CREATE TABLE Planet (
+    planet_id NUMBER CONSTRAINT pk_planet_id PRIMARY KEY,
+    planet_name VARCHAR2(100),
+    planet_mass NUMBER,
+    planet_type VARCHAR2(50),
+    planet_diamenter_km NUMBER,
+    planet_distance_from_sun_au NUMBER,
+    has_surface CHAR(1),
+    system_id NUMBER,
+    CONSTRAINT fk_planetrysystem_system_id FOREIGN KEY (system_id) REFERENCES PlanetrySystem(system_id)
+);
+
+CREATE TABLE Moon (
+    moon_id NUMBER CONSTRAINT pk_moon_id PRIMARY KEY,
+    moon_name VARCHAR2(100),
+    moon_diameter_km NUMBER,
+    orbital_period_days NUMBER,
+    planet_id NUMBER,
+    CONSTRAINT fk_moons_planet_id FOREIGN KEY (planet_id) REFERENCES Planet(planet_id)
+);
+
+CREATE TABLE EnvironmentCondition (  
+    condtion_id NUMBER CONSTRAINT pk_condition_id PRIMARY KEY,
+    solar_radiation_w_m2 NUMBER,
+    magnetic_field_strength NUMBER,
+    gravity_m_s2 NUMBER,
+    planet_id NUMBER,
+    CONSTRAINT fk_envconditions_planet_id FOREIGN KEY (planet_id) REFERENCES Planet(planet_id)
+);
+
+CREATE TABLE WaterPresence (
+    water_id NUMBER CONSTRAINT pk_water_id PRIMARY KEY,
+    presence CHAR(1),
+    state VARCHAR2(50),
+    planet_id NUMBER,
+    CONSTRAINT fk_waterpresence_planet_id FOREIGN KEY (planet_id) REFERENCES Planet(planet_id)
+);
+
+
+CREATE TABLE Atmosphere (
+    atmoshpeher_id NUMBER CONSTRAINT pk_atmosphere_id PRIMARY KEY,
+    composition VARCHAR2(500),
+    pressure_kpa NUMBER,
+    temperature_c NUMBER,
+    thickness NUMBER,
+    planet_id NUMBER,
+    CONSTRAINT fk_atmospheres_planet_id FOREIGN KEY (planet_id) REFERENCES Planet(planet_id)
+);
+
+CREATE TABLE Mission (
+    mission_id NUMBER CONSTRAINT pk_mission_id PRIMARY KEY,
+    mission_name VARCHAR2(200),
+    launch_date DATE,
+    status VARCHAR2(50),
+    findings VARCHAR2(1000),
+    planet_id NUMBER,
+    CONSTRAINT fk_missions_planet_id FOREIGN KEY (planet_id) REFERENCES Planet(planet_id)
+);
+
+
