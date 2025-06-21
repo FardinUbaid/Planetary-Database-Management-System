@@ -1,0 +1,797 @@
+**Now implement these PL/SQL to properly run the project and to fetch different types of data's through our web app!!**
+
+ 2 Variables:
+
+1] Declares a variables (v_planet_name) and assigns values to it. To Demonstrates the use of variables in PL/SQL.
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+DECLARE
+    v_planet_name VARCHAR2(50);
+   
+BEGIN
+    v_planet_name := 'Earth';
+   
+    DBMS_OUTPUT.PUT_LINE('Planet: ' || v_planet_name);
+END;
+/
+
+
+2] Declares a variables (v_gravity) and assigns values to it. To Demonstrates the use of variables in PL/SQL.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+DECLARE
+  
+    v_mass NUMBER;
+BEGIN
+    
+    v_mass := 5.972;
+    DBMS_OUTPUT.PUT_LINE('Mass: ' || v_mass || ' x 10^24 kg');
+END;
+/
+
+
+2 Operators:  
+
+1] Performs arithmetic operations on two variables using / * operators to calculate a derived value.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+DECLARE
+    v_gravity_earth NUMBER := 9.8; 
+    v_gravity_mars NUMBER := 3.7;
+    v_ratio NUMBER;
+BEGIN
+    v_ratio := v_gravity_mars / v_gravity_earth * 100;
+    DBMS_OUTPUT.PUT_LINE('Gravity on Mars is ' || v_ratio || '% of Earth''s gravity.');
+END;
+/
+
+
+2] Write a PL/SQL block to calculate and display the difference in surface area between two planets by using (- operator) and the ratio (/ * operator) of the larger planet's surface area to the smaller planet's surface area, expressed as a percentage.
+
+Answer:
+-- Project Name: Planetary Database Management System  
+-- Semester: Fall 2024-2025  
+-- Course Name: Advanced Database Management System  
+-- Section: A  
+DECLARE
+    v_surface_area_earth NUMBER := 510100000; -- in square kilometers  
+    v_surface_area_mars NUMBER := 144800000; -- in square kilometers  
+    v_area_difference NUMBER;  
+    v_area_ratio NUMBER;  
+BEGIN  
+    -- Calculate the difference in surface area  
+    v_area_difference := v_surface_area_earth - v_surface_area_mars;  
+
+    -- Calculate the ratio of Earth's surface area to Mars's surface area as a percentage  
+    v_area_ratio := (v_surface_area_earth / v_surface_area_mars) * 100;  
+
+    -- Display the results  
+    DBMS_OUTPUT.PUT_LINE('The difference in surface area between Earth and Mars is ' || v_area_difference || ' square kilometers.');  
+    DBMS_OUTPUT.PUT_LINE('Earth''s surface area is ' || v_area_ratio || '% of Mars''s surface area.');  
+END;  
+/  
+
+
+2 Single-Row Functions : 
+1] Uses UPPER to convert text to uppercase, for showcasing single-row functions.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+DECLARE
+    v_planet_name VARCHAR2(50) := 'MARS';
+    v_upper_name VARCHAR2(50);
+    
+BEGIN
+    v_upper_name := UPPER(v_planet_name);
+    DBMS_OUTPUT.PUT_LINE('Uppercase Planet Name: ' || v_upper_name);
+  
+END;
+/
+
+
+2] Uses LENGTH to find length of a number, for showcasing single-row functions.
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+DECLARE
+    v_planet_name VARCHAR2(50) := 'MARS';
+    v_length NUMBER;
+BEGIN
+
+    v_length := LENGTH(v_planet_name);
+    DBMS_OUTPUT.PUT_LINE('Length of Planet Name: ' || v_length);
+END;
+/
+
+
+2 Group Functions : 
+
+1] Demonstrates MAX to calculate the maximum and COUNT to count the rows in a table.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+DECLARE
+    v_max_distance NUMBER;
+    
+BEGIN
+   
+    SELECT MAX(planet_distance_from_sun_au) 
+    INTO v_max_distance
+    FROM Planet;
+
+    DBMS_OUTPUT.PUT_LINE('Maximum Distance (AU): ' || v_max_distance);
+    
+END;
+/
+
+2] Demonstrates AVG to show the average of a row in a table.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+DECLARE
+    
+    v_avg_distance NUMBER;
+BEGIN
+  
+    SELECT AVG(planet_distance_from_sun_au) 
+    INTO v_avg_distance
+    FROM Planet;
+
+    DBMS_OUTPUT.PUT_LINE('Average Distance (AU): ' || v_avg_distance);
+END;
+/
+
+
+2 Loops  :
+1] Uses of FOR loops to iterate through data, printing the planetary details. 
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+BEGIN
+    FOR i IN 1..5 LOOP
+        DBMS_OUTPUT.PUT_LINE('Planet ID: ' || i);
+    END LOOP;
+END;
+/
+
+
+2] Uses of WHILE loops to iterate through data, printing the planetary details.   
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    v_counter NUMBER := 1;
+BEGIN
+    WHILE v_counter <= 10 LOOP
+        DBMS_OUTPUT.PUT_LINE('Planet Count: ' || v_counter);
+        v_counter := v_counter + 1;
+    END LOOP;
+END;
+/
+
+
+2 Conditional Statements  :
+
+1] Employs IF-THEN-ELSE to implement decision-making logic based on planetary properties.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    v_planet_type VARCHAR2(50) := 'Terrestrial';
+BEGIN
+    IF v_planet_type = 'Terrestrial' THEN
+        DBMS_OUTPUT.PUT_LINE('This is a rocky planet.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('This is a gas giant.');
+    END IF;
+END;
+/
+
+
+2] Employs CASE to implement decision-making logic based on planetary properties.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    v_planet_id NUMBER := 5;
+BEGIN
+    CASE v_planet_id
+        WHEN 1 THEN DBMS_OUTPUT.PUT_LINE('Mercury');
+        WHEN 2 THEN DBMS_OUTPUT.PUT_LINE('Venus');
+        WHEN 3 THEN DBMS_OUTPUT.PUT_LINE('Earth');
+        WHEN 4 THEN DBMS_OUTPUT.PUT_LINE('Mars');
+        ELSE DBMS_OUTPUT.PUT_LINE('Other Planets');
+    END CASE;
+END;
+/
+
+2 Subqueries  :
+1] Execute a subqueries to fetch data from a related table within a PL/SQL block.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    v_closest_planet_name VARCHAR2(50);
+BEGIN
+    -- Fetch the name of the closest planet
+    SELECT planet_name
+    INTO v_closest_planet_name
+    FROM Planet
+    WHERE planet_distance_from_sun_au = 
+          (SELECT MIN(planet_distance_from_sun_au) FROM Planet);
+
+    -- Display the name of the closest planet
+    DBMS_OUTPUT.PUT_LINE('Closest Planet: ' || v_closest_planet_name);
+END;
+/
+
+
+2] Execute a subquerie(rec) to fetch data from a related table within a PL/SQL block.
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+BEGIN
+    FOR rec IN (SELECT planet_name 
+                FROM Planet p 
+                WHERE planet_distance_from_sun_au > 
+                      (SELECT AVG(planet_distance_from_sun_au) FROM Planet)) LOOP
+        DBMS_OUTPUT.PUT_LINE('Distant Planet: ' || rec.planet_name);
+    END LOOP;
+END;
+/
+
+
+
+2 Joins  :
+1]Performs INNER JOIN operations within a PL/SQL block to retrieve combined data from multiple tables.
+
+INNER JOIN:
+•	Retrieves rows that have matching values in both tables.
+
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+BEGIN
+    FOR rec IN (
+        SELECT p.planet_name, m.moon_name
+        FROM Planet p
+        INNER JOIN Moon m ON p.planet_id = m.planet_id
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE('Planet: ' || rec.planet_name || ' - Moon: ' || rec.moon_name);
+    END LOOP;
+END;
+/
+
+
+2] Perform LEFT JOIN operations within a PL/SQL block to retrieve combined data from multiple tables.
+
+LEFT JOIN (or LEFT OUTER JOIN):
+•	Retrieves all rows from the left table and matching rows from the right table. Non-matching rows are filled with NULL.
+
+
+Answer:
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+BEGIN
+    FOR rec IN (
+        SELECT p.planet_name, NVL(e.findings, 'No Findings') AS findings
+        FROM Planet p
+        LEFT JOIN Mission e ON p.planet_id = e.planet_id
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE('Planet: ' || rec.planet_name || ' - Findings: ' || rec.findings);
+    END LOOP;
+END;
+/
+
+
+Advanced PL/SQL  
+
+2 Stored Functions  
+1] get_avg_gravity calculates and returns the average gravity of planets.
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE FUNCTION get_avg_gravity
+RETURN NUMBER
+AS
+    avg_gravity NUMBER;
+BEGIN
+    SELECT AVG(gravity_m_s2) INTO avg_gravity FROM EnvironmentCondition;
+    RETURN avg_gravity;
+END;
+/
+
+
+2] Function 2: has_moon checks if a planet has moons and returns "Yes" or "No".  
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE FUNCTION has_moon(p_planet_id NUMBER)
+RETURN VARCHAR2
+AS
+    moon_exists NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO moon_exists FROM Moon WHERE planet_id = p_planet_id;
+    IF moon_exists > 0 THEN
+        RETURN 'Yes';
+    ELSE
+        RETURN 'No';
+    END IF;
+END;
+/
+
+2 Stored Procedures  
+1] display_planet_details prints planetary names and types.  
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE PROCEDURE display_planet_details
+AS
+BEGIN
+    FOR rec IN (SELECT planet_id, planet_name, planet_type FROM Planet) LOOP
+        DBMS_OUTPUT.PUT_LINE('Planet ID: ' || rec.planet_id || ', Name: ' || rec.planet_name || ', Type: ' || rec.planet_type);
+    END LOOP;
+END;
+/
+
+
+2] update_planet_mass updates the mass of a planet and logs the change.  
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE PROCEDURE update_planet_mass(p_planet_id NUMBER, p_new_mass NUMBER)
+AS
+BEGIN
+    UPDATE Planet
+    SET planet_mass = p_new_mass
+    WHERE planet_id = p_planet_id;
+
+    DBMS_OUTPUT.PUT_LINE('Planet mass updated successfully for Planet ID: ' || p_planet_id);
+END;
+/
+
+
+2 Table-Based Records  
+1] Fetches details of a specific planet into a table-based record and displays it.  
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    planet_rec Planet%ROWTYPE;
+BEGIN
+    SELECT * INTO planet_rec FROM Planet WHERE planet_id = 3; -- Example for Earth
+    DBMS_OUTPUT.PUT_LINE('Planet: ' || planet_rec.planet_name || ', Mass: ' || planet_rec.planet_mass || ', Type: ' || planet_rec.planet_type);
+END;
+/
+
+
+2] Updates planetary data using a table-based record.  
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    planet_rec Planet%ROWTYPE;
+BEGIN
+   
+    planet_rec.planet_id := 3;
+    planet_rec.planet_mass := 5.972;
+    planet_rec.planet_name := 'Earth';
+    planet_rec.planet_type := 'Terrestrial';
+
+    
+    UPDATE Planet
+    SET planet_mass = planet_rec.planet_mass
+    WHERE planet_id = planet_rec.planet_id;
+
+    DBMS_OUTPUT.PUT_LINE('Planet data updated for: ' || planet_rec.planet_name);
+END;
+/
+
+
+
+2 Explicit Cursors  :
+1] Fetches planets farther than 1 AU from the Sun and prints their names and distances. 
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    planet_rec Planet%ROWTYPE;
+BEGIN
+    -- Assigning values to the record
+    planet_rec.planet_id := 3;
+    planet_rec.planet_mass := 5.972;
+    planet_rec.planet_name := 'Earth';
+    planet_rec.planet_type := 'Terrestrial';
+
+    -- Updating the Planet table
+    UPDATE Planet
+    SET planet_mass = planet_rec.planet_mass
+    WHERE planet_id = planet_rec.planet_id;
+
+    -- Display confirmation message
+    DBMS_OUTPUT.PUT_LINE('Planet data updated for: ' || planet_rec.planet_name);
+END;
+/
+
+
+2] Fetches the moons of a specific planet and displays their names.
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    CURSOR c_moons(p_planet_id NUMBER) IS
+        SELECT moon_name FROM Moon WHERE planet_id = p_planet_id;
+
+    moon_name Moon.moon_name%TYPE;
+BEGIN
+    OPEN c_moons(4); 
+    LOOP
+        FETCH c_moons INTO moon_name;
+        EXIT WHEN c_moons%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('Moon: ' || moon_name);
+    END LOOP;
+    CLOSE c_moons;
+END;
+/
+
+
+2 Cursor-Based Records :
+
+1] Retrieves all planetary details using a cursor-based record.  
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    CURSOR c_all_planets IS SELECT * FROM Planet;
+    planet_rec c_all_planets%ROWTYPE;
+BEGIN
+    OPEN c_all_planets;
+    LOOP
+        FETCH c_all_planets INTO planet_rec;
+        EXIT WHEN c_all_planets%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('Planet: ' || planet_rec.planet_name || ', Type: ' || planet_rec.planet_type);
+    END LOOP;
+    CLOSE c_all_planets;
+END;
+/
+
+
+
+
+ 2] Fetches and displays environmental conditions using a cursor-based record.
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+DECLARE
+    CURSOR c_env_conditions IS SELECT * FROM EnvironmentCondition;
+    env_rec c_env_conditions%ROWTYPE;
+BEGIN
+    OPEN c_env_conditions;
+    LOOP
+        FETCH c_env_conditions INTO env_rec;
+        EXIT WHEN c_env_conditions%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('Gravity: ' || env_rec.gravity_m_s2 || ', Radiation: ' || env_rec.solar_radiation_w_m2);
+    END LOOP;
+    CLOSE c_env_conditions;
+END;
+/
+
+
+
+2 Row-Level Triggers  :
+
+1] Logs changes to the mass of planets after an update.  
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE TRIGGER trg_log_mass_change
+AFTER UPDATE OF planet_mass ON Planet
+FOR EACH ROW
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Planet ' || :OLD.planet_name || ' mass changed from ' || :OLD.planet_mass || ' to ' || :NEW.planet_mass);
+END;
+/
+
+2] Prevents insertion or update of planets with non-positive diameters.
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE TRIGGER trg_check_diameter
+BEFORE INSERT OR UPDATE ON Planet
+FOR EACH ROW
+BEGIN
+    IF :NEW.planet_diamenter_km <= 0 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Planet diameter must be positive!');
+    END IF;
+END;
+/
+
+
+
+2 Statement-Level Triggers : 
+
+1] Logs insertions into the Moons table
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE TRIGGER trg_log_moon_inserts
+AFTER INSERT ON Moon
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('New moon inserted into the database.');
+END;
+/
+
+
+
+2] Prevents deletions from the Systems table
+
+Answer:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE TRIGGER trg_prevent_system_delete
+BEFORE DELETE ON PlanetrySystem
+BEGIN
+    RAISE_APPLICATION_ERROR(-20002, 'Deletion from the Systems table is not allowed!');
+END;
+/
+
+
+
+2 Packages  :
+
+1] pkg_planetary_utils contains utilities to display planetary data and get planetary type.
+
+Answer:  
+
+Package_Specification:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE PACKAGE pkg_planetary_utils AS
+    PROCEDURE display_planet_data(p_planet_id NUMBER);
+    FUNCTION get_planetary_type(p_planet_id NUMBER) RETURN VARCHAR2;
+END;
+/
+
+
+
+Package_Body
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE PACKAGE BODY pkg_planetary_utils AS
+    PROCEDURE display_planet_data(p_planet_id NUMBER) AS
+        planet_name VARCHAR2(100);
+        planet_type VARCHAR2(50);
+    BEGIN
+        SELECT planet_name, planet_type INTO planet_name, planet_type FROM Planet WHERE planet_id = p_planet_id;
+        DBMS_OUTPUT.PUT_LINE('Planet: ' || planet_name || ', Type: ' || planet_type);
+    END;
+
+    FUNCTION get_planetary_type(p_planet_id NUMBER) RETURN VARCHAR2 AS
+        planet_type VARCHAR2(50);
+    BEGIN
+        SELECT planet_type INTO planet_type FROM Planet WHERE planet_id = p_planet_id;
+        RETURN planet_type;
+    END;
+END;
+/
+
+
+
+2] pkg_mission_mgmt provides procedures to add exploration missions and display mission status.  
+
+Answer:
+
+Package_Specification:
+
+
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE PACKAGE pkg_mission_mgmt AS
+    PROCEDURE add_mission(p_mission_name VARCHAR2, p_launch_date DATE, p_planet_id NUMBER);
+    PROCEDURE display_mission_status(p_mission_id NUMBER);
+END;
+/
+
+
+Package_Body:
+
+-- Project Name: Planetary Database Management System
+-- Semester: Fall 2024-2025
+-- Course Name: Advanced Database Management System
+-- Section: A
+
+CREATE OR REPLACE PACKAGE BODY pkg_mission_mgmt AS
+    PROCEDURE add_mission(p_mission_name VARCHAR2, p_launch_date DATE, p_planet_id NUMBER) AS
+    BEGIN
+       
+        INSERT INTO Mission (mission_id, mission_name, launch_date, status, planet_id)
+        VALUES (ExplorationMissions_seq.NEXTVAL, p_mission_name, p_launch_date, 'Planned', p_planet_id);
+        
+        
+        DBMS_OUTPUT.PUT_LINE('Mission added successfully: ' || p_mission_name);
+    END;
+
+    PROCEDURE display_mission_status(p_mission_id NUMBER) AS
+        mission_status VARCHAR2(50);
+    BEGIN
+        
+        SELECT status 
+        INTO mission_status 
+        FROM Mission 
+        WHERE mission_id = p_mission_id;
+        
+       
+        DBMS_OUTPUT.PUT_LINE('Mission Status: ' || mission_status);
+    END;
+END;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

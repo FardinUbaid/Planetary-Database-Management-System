@@ -1,0 +1,513 @@
+**Please Insert These given SQL into your Oracle 10g express Edition to properly run the project**
+
+DATA INSERTION
+
+
+Planetry system TABLE:
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'Y', 'Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'Y', 'Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'Y', 'Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'Y', 'Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'Y', 'Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'Y', 'Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'Y', 'Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'Y', 'Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'M-type', 'N', 'Red Dwarf');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'K-type', 'N', 'Orange Dwarf');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'F-type', 'N', 'Yellow-White Dwarf');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'A-type', 'N', 'White Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'G-type', 'N', 'Yellow Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'K-type', 'N', 'Orange Dwarf');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'M-type', 'N', 'Red Dwarf');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'B-type', 'N', 'Blue Main Sequence');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'O-type', 'N', 'Blue Giant');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'M-type', 'N', 'Red Dwarf');
+
+INSERT INTO PlanetrySystem (system_id, star_type, is_part_of_solar_system, star_system_type)
+VALUES (system_seq.NEXTVAL, 'K-type', 'N', 'Orange Dwarf');
+
+
+PLANETRY SYSTEM LINK TABLE:
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 0.39, 21);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 0.72, 22);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'Y', 1.00, 23);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'Y', 1.52, 24);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 5.20, 25);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 9.58, 26);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 19.22, 27);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 30.05, 28);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 39.48, 29);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 0.10, 30);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'Y', 0.15, 31);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 0.04, 32);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 5.00, 33);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'Y', 1.00, 34);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'Y', 1.25, 35);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 0.05, 36);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 50.00, 37);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'N', 0.75, 38);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'Y', 0.90, 39);
+
+INSERT INTO Planetrysystemlink (link_id, is_in_habitable_zone, distance_to_star_au, system_id)
+VALUES (Planetry_SystemLink_seq.NEXTVAL, 'Y', 1.00, 40);
+
+
+
+
+
+PLANET TABLE:
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface,system_id) 
+VALUES (planets_seq.NEXTVAL, 'Mercury', 0.330, 'Terrestrial', 4879, 0.39, 'Y',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Venus', 4.87, 'Terrestrial', 12104, 0.72, 'Y',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Earth', 5.97, 'Terrestrial', 12742, 1.00, 'Y',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Mars', 0.642, 'Terrestrial', 6779, 1.52, 'Y',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Jupiter', 1898, 'Gas Giant', 139820, 5.20, 'N',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Saturn', 568, 'Gas Giant', 116460, 9.58, 'N',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Uranus', 86.8, 'Ice Giant', 50724, 19.20, 'N',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Neptune', 102, 'Ice Giant', 49244, 30.05, 'N',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Pluto', 0.0146, 'Dwarf', 2376, 39.48, 'N',21);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Kepler-22b', 36.0, 'Exoplanet', 30000, 600.00, 'Y',22);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Proxima b', 1.27, 'Exoplanet', 12000, 0.05, 'Y',22);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Gliese 581c', 5.36, 'Exoplanet', 18000, 0.15, 'Y',22);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, '55 Cancri e', 7.8, 'Exoplanet', 26000, 0.03, 'N',22);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Trappist-1e', 0.6, 'Exoplanet', 12000, 0.05, 'Y',22);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Trappist-1f', 0.7, 'Exoplanet', 11000, 0.06, 'Y',24);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'K2-18b', 8.6, 'Exoplanet', 29000, 0.12, 'Y',24);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'HD 189733b', 220, 'Exoplanet', 63000, 0.03, 'N',24);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'WASP-12b', 450, 'Exoplanet', 156000, 0.02, 'N',24);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'Kepler-186f', 1.4, 'Exoplanet', 14000, 0.4, 'Y',24);
+
+INSERT INTO Planet (planet_id, planet_name, planet_mass, planet_type, planet_diamenter_km, planet_distance_from_sun_au, has_surface) 
+VALUES (planets_seq.NEXTVAL, 'GJ 667 Cc', 2.6, 'Exoplanet', 13000, 0.12, 'Y',24);
+
+
+MOON TABLE:
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Moon', 3474, 27.3, 3);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Phobos', 22.4, 0.32, 4);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Deimos', 12.4, 1.26, 4);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Io', 3643, 1.77, 5);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Europa', 3122, 3.55, 5);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Ganymede', 5268, 7.15, 5);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Callisto', 4821, 16.69, 5);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Titan', 5150, 15.95, 6);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Rhea', 1527, 4.52, 6);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Triton', 2706, -5.88, 8);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Charon', 1212, 6.39, 9);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Oberon', 1523, 13.46, 7);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Ariel', 1158, 2.52, 7);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Umbriel', 1169, 4.14, 7);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Miranda', 471, 1.41, 7);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Mimas', 396, 0.94, 6);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Enceladus', 504, 1.37, 6);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Iapetus', 1469, 79.32, 6);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Nereid', 340, 360.13, 8);
+
+INSERT INTO Moon (moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id)
+VALUES (moons_seq.NEXTVAL, 'Proteus', 420, 1.12, 8);
+
+
+
+EnvironmentCondition TABLE:
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 9126.6, 0.0, 3.7, 1);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 2613.9, 0.0, 8.87, 2);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 1361.0, 25.0, 9.81, 3);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 589.2, 1.5, 3.71, 4);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 50.26, 4.28, 24.79, 5);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 15.08, 0.21, 10.44, 6);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 3.71, 0.23, 8.69, 7);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 1.51, 0.34, 11.15, 8);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 0.874, 0.0, 0.62, 9);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 0.0, 0.0, 9.8, 10);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 132.0, 0.0, 9.7, 11);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 94.2, 0.0, 17.0, 12);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 38.1, 0.0, 19.8, 13);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 58.6, 0.0, 8.5, 14);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 61.2, 0.0, 9.1, 15);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 35.0, 0.0, 10.3, 16);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 48.9, 0.0, 8.7, 17);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 102.5, 0.0, 2.2, 18);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 145.7, 0.0, 1.9, 19);
+
+INSERT INTO EnvironmentCondition (condtion_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id)
+VALUES (envconditions_seq.NEXTVAL, 124.3, 0.0, 2.5, 20);
+
+
+
+
+WaterPresence TABLE:
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 1);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 2);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Liquid', 3);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Frozen', 4);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 5);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 6);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 7);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 8);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Frozen', 9);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Liquid', 10);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Liquid', 11);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Liquid', 12);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 13);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Liquid', 14);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Liquid', 15);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Vapor', 16);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 17);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'N', 'None', 18);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Liquid', 19);
+
+INSERT INTO WaterPresence (water_id, presence, state, planet_id)
+VALUES (waterpresence_seq.NEXTVAL, 'Y', 'Liquid', 20);
+
+
+
+Atmosphere TABLE:
+
+
+
+INSERT INTO Atmosphere (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (1, 'Oxygen, Sodium', 0.005, 167, 80, 1);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (2, 'Carbon Dioxide, Nitrogen', 9200, 464, 250, 2);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (3, 'Nitrogen, Oxygen', 101.3, 15, 100, 3);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (4, 'Carbon Dioxide, Argon', 0.636, -63, 11, 4);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (5, 'Hydrogen, Helium', 200000, -108, 50000, 5);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (6, 'Hydrogen, Helium', 140000, -139, 48000, 6);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (7, 'Hydrogen, Helium, Methane', 110000, -195, 35000, 7);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (8, 'Nitrogen, Methane', 145000, -200, 800, 8);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (9, 'Nitrogen, Methane', 0.03, -223, 30, 9);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (10, 'Hydrogen, Methane', 0.001, -230, 10, 10);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (11, 'Carbon Dioxide', 9000, 450, 150, 11);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (12, 'Nitrogen, Methane', 105000, -220, 600, 12);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (13, 'Methane, Hydrogen', 120000, -200, 750, 13);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (14, 'Hydrogen, Ammonia', 50000, -150, 1000, 14);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (15, 'Nitrogen, Methane', 200000, -230, 850, 15);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (16, 'Nitrogen, Carbon Dioxide', 1.3, -90, 95, 16);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (17, 'Helium, Hydrogen', 0.5, -170, 25, 17);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (18, 'Carbon Dioxide, Nitrogen', 0.2, -120, 15, 18);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (19, 'Methane, Hydrogen', 30000, -210, 600, 19);
+
+INSERT INTO Atmospheres (atmoshpeher_id, composition, pressure_kpa, temperature_c, thickness, planet_id)
+VALUES (20, 'Oxygen, Nitrogen', 100.5, 10, 90, 20);
+
+
+
+MISSION TABLE:
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Akatsuki', TO_DATE('2010-05-21', 'YYYY-MM-DD'), 'Active', 'Studied Venus'' atmosphere', 2);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Apollo 11', TO_DATE('1969-07-16', 'YYYY-MM-DD'), 'Completed', 'Human moon landing', 3);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Viking 1', TO_DATE('1975-08-20', 'YYYY-MM-DD'), 'Completed', 'Searched for life on Mars', 4);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Galileo', TO_DATE('1989-10-18', 'YYYY-MM-DD'), 'Completed', 'Explored Jupiter and its moons', 5);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Cassini', TO_DATE('1997-10-15', 'YYYY-MM-DD'), 'Completed', 'Studied Saturn''s rings and moons', 6);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Voyager 2', TO_DATE('1977-08-20', 'YYYY-MM-DD'), 'Active', 'Studied Uranus'' magnetic field', 7);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Voyager 2', TO_DATE('1977-08-20', 'YYYY-MM-DD'), 'Active', 'Observed Neptune''s storms', 8);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'New Horizons', TO_DATE('2006-01-19', 'YYYY-MM-DD'), 'Active', 'Explored Pluto and its moons', 9);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'BepiColombo', TO_DATE('2018-10-20', 'YYYY-MM-DD'), 'Active', 'Studying Mercury''s geology', 1);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Pioneer Venus', TO_DATE('1978-05-20', 'YYYY-MM-DD'), 'Completed', 'Mapped Venus'' surface', 2);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Mars Rover Perseverance', TO_DATE('2020-07-30', 'YYYY-MM-DD'), 'Active', 'Searching for signs of past life', 4);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Juno', TO_DATE('2011-08-05', 'YYYY-MM-DD'), 'Active', 'Analyzing Jupiter''s atmosphere', 5);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Huygens', TO_DATE('2004-12-25', 'YYYY-MM-DD'), 'Completed', 'Landed on Titan', 6);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Uranus Orbiter', TO_DATE('2030-06-15', 'YYYY-MM-DD'), 'Planned', 'To study Uranus'' structure', 7);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Neptune Explorer', TO_DATE('2035-07-11', 'YYYY-MM-DD'), 'Planned', 'To study Neptune''s atmosphere', 8);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Luna 2', TO_DATE('1959-09-12', 'YYYY-MM-DD'), 'Completed', 'First spacecraft to impact Moon', 3);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Chandrayaan-2', TO_DATE('2019-07-22', 'YYYY-MM-DD'), 'Active', 'Mapping lunar surface', 3);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Mars Express', TO_DATE('2003-06-02', 'YYYY-MM-DD'), 'Active', 'Mapping Mars'' surface', 4);
+
+INSERT INTO Mission (mission_id, mission_name, launch_date, status, findings, planet_id)
+VALUES (missions_seq.NEXTVAL, 'Europa Clipper', TO_DATE('2024-10-10', 'YYYY-MM-DD'), 'Planned', 'To explore Europa''s subsurface ocean', 5);
+
+
+

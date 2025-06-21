@@ -1,0 +1,171 @@
+NORMALIZATION
+Branch: have
+UNF: have (planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_Distance_from_sun, solid_surface, moon_id, moon_name, moon_diameter, orbital_characteristic)
+1NF:
+1.	planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_Distance_from_sun, solid_surface
+2.	moon_id, moon_name, moon_diameter_km, orbital_period_days
+
+2NF: 
+1.	planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_Distance_from_sun, solid_surface
+2.	moon_id, moon_name, moon_diameter_km, orbital_period_days
+
+3NF:  There is no transitive dependency. Relation already in 3NF
+
+1.	planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_Distance_from_sun, solid_surface
+2.	moon_id, moon_name, moon_diameter_km, orbital_period_days
+
+Table creation: 
+1.	planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_Distance_from_sun, solid_surface
+2.	moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id
+
+Branch: exists
+
+UNF: exists (planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg, condition_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2)
+
+1NF: There is no multivalued attribute
+1.	planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	condition_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2
+
+2NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	condition_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2
+
+3NF:  There is no transitive dependency. Relation already in 3NF
+
+1.	planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	condition_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2
+
+Table creation: 
+1.	planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	condition_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id
+
+
+Branch: found
+
+UNF: found (planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg, water_id, presence, state)
+
+1NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	water_id, presence, state
+
+2NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	water_id, presence, state
+
+3NF:  There is no transitive dependency. Relation already in 3NF
+
+1.	planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	water_id, presence, state
+
+Table creation: 
+1.	planet_id, planet_name, planet_type, planet_diameter_km, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	water_id, presence, state, planet_id
+
+Branch: contain
+
+UNF: contain (planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg, atmosphere_id, composition, pressure_kpa, temperature_c, thickness)
+
+1NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	atmosphere_id, composition, pressure_kpa, temperature_c, thickness
+
+2NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	atmosphere_id, composition, pressure_kpa, temperature_c, thickness
+
+3NF:  There is no transitive dependency. Relation already in 3NF
+
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	atmosphere_id, composition, pressure_kpa, temperature_c, thickness
+
+Table creation: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	atmosphere_id, composition, pressure_kpa, temperature_c, thickness, planet_id
+
+Branch: face
+
+UNF: face (planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg, mission_id, mission_name, launch_date, status, findings)
+
+1NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	mission_id, mission_name, launch_date, status, findings
+
+2NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	mission_id, mission_name, launch_date, status, findings
+
+3NF:  There is no transitive dependency. Relation already in 3NF
+
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	mission_id, mission_name, launch_date, status, findings, planet_id
+
+Table creation: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	mission_id, mission_name, launch_date, status, findings
+
+Branch: place
+UNF: place (planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg, system_id, star_type, is_part_of_solar_system, star_system_type)
+
+1NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	system_id, star_type, is_part_of_solar_system, star_system_type
+
+2NF: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	system_id, star_type, is_part_of_solar_system, star_system_type
+
+3NF:  There is no transitive dependency. Relation already in 3NF
+
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg
+2.	system_id, star_type, is_part_of_solar_system, star_system_type
+
+Table creation: 
+1.	planet_id, planet_name, planet_type, planet_diameter, planet_distance_from_sun_au, solid_surface, planet_mass_kg, system_id
+2.	system_id, star_type, is_part_of_solar_system, star_system_type
+
+Branch: possesses
+
+UNF: possesses (system_id, star_type, is_part_of_solar_system, star_system_type, link_id, is_in_habitable_zone, distance_to_star_au)
+
+1NF:
+1.	system_id, star_type, is_part_of_solar_system, star_system_type
+2.	link_id, is_in_habitable_zone, distance_to_star_au
+
+2NF: 
+1.	system_id, star_type, is_part_of_solar_system, star_system_type
+2.	link_id, is_in_habitable_zone, distance_to_star_au
+
+3NF:  There is no transitive dependency. Relation already in 3NF
+
+1.	system_id, star_type, is_part_of_solar_system, star_system_type
+2.	link_id, is_in_habitable_zone, distance_to_star_au
+
+Table creation: 
+1.	system_id, star_type, is_part_of_solar_system, star_system_type
+2.	link_id, is_in_habitable_zone, distance_to_star_au, system_id
+
+Temporary table:
+3.	planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_distance_from_sun, solid_surface
+4.	moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id
+5.	planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_distance_from_sun, solid_surface 
+6.	condition_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id
+7.	planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_distance_from_sun, solid_surface
+8.	water_id, presence, state, planet_id
+9.	planet_id, planet_name, planet_mass, planet_type, planet_diameter, planet_distance_from_sun, solid_surface
+10.	atmosphere_id, composition, pressure_kpa, temperature_c, thickness, planet_id
+11.	planet_id, planet_name, planet_type, planet_mass, planet_diameter, planet_distance_from_sun_au, solid_surface
+12.	mission_id, mission_name, launch_date, status, findings, planet_id
+13.	planet_id, planet_name, planet_type, planet_mass, planet_diameter, planet_distance_from_sun_au, solid_surface, system_id
+14.	system_id, star_type, is_a_part_of_solar_system, star_system_type, 
+15.	system_id, star_type, is_a_part_of_solar_system, solar_system_type
+16.	link_id, is_in_habitable_zone, distance_to_star_au, system_id
+
+Final table:
+1.	planet_id, planet_name, planet_mass, planet_type, planet_diameter_km, planet_distance_from_sun, solid_surface, system_id
+2.	moon_id, moon_name, moon_diameter_km, orbital_period_days, planet_id
+3.	condition_id, solar_radiation_w_m2, magnetic_field_strength, gravity_m_s2, planet_id
+4.	water_id, presence, state, planet_id
+5.	atmosphere_id, composition, pressure_kpa, temperature_c, thickness, planet_id
+6.	mission_id, mission_name, launch_date, status, findings, planet_id
+7.	system_id, star_type, is_part_of_solar_system, star_system_type, planet_id
+8.	link_id, is_in_habitable_zone, distance_to_star_au, system_id
